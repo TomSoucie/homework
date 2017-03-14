@@ -1,6 +1,5 @@
-# Pseudocode to outline the Bad Connection program
-
 #get input from the user
+puts "HELLO, THIS IS A GROCERY STORE!"
 
 #based on the user input do some action
     #if the input is "blank" (simply hit 'enter') output "HELLO?!" to the screen
