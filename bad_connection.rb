@@ -1,9 +1,23 @@
-#get input from the user
+require 'byebug'
+
 puts "HELLO, THIS IS A GROCERY STORE!"
 
-#based on the user input do some action
-    #if the input is "blank" (simply hit 'enter') output "HELLO?!" to the screen
-    #if the input contains any lower case letters output "I AM HAVING A HARD TIME HEARING YOU." to the screen
-    #if the input is made in all upper-case letters output "NO, THIS IS NOT A PET STORE" to the screen
-    #after the first time the user input is "GOODBYE!" output "ANYTHING ELSE I CAN HELP WITH?" to the screen
-    #finally after the second time of user input "GOODBYE!" output "THANK YOU FOR CALLING!" to the screen and exit the program
+goodbye = 0
+
+while goodbye < 2
+    user_input = gets.chomp
+    if user_input == "GOODBYE!" && goodbye == 1
+        goodbye += 1
+        puts "THANK YOU FOR CALLING"
+    elsif user_input == "GOODBYE!" && goodbye == 0
+        goodbye += 1
+        puts "ANYTHING ELSE I CAN DO FOR YOU?"
+    elsif (/./ =~ user_input) == nil                #no response (hit enter)
+        puts "HELLO?!"
+    elsif (/[a-z]/ =~ user_input) != nil            #any lowercase
+        puts "I AM HAVING A HARD TIME HEARING YOU"
+    elsif (/[\s,^a-z,A-Z]/ =~ user_input) != nil    #ALL CAPS
+        puts "NO, THIS IS NOT A PET STORE"
+    end
+end
+   
