@@ -3,6 +3,27 @@ require 'minitest/autorun'
 require 'minitest/pride'
 require './lib/calculator'
 
-class CaluculatorTest < Minitest::Test
+class CalculatorTest < Minitest::Test
+  
+  def test_the_object_is_a_calculator
+    item = Calculator.new
+    assert_instance_of Calculator, item
+  end
+
+  def test_the_calculator_tracks_a_total
+    skip
+  end
+
+  def test_the_calculator_can_add
+    skip
+  end
+
+  def test_the_calculator_can_clear_the_memory
+    skip
+  end
+  
+  def test_the_calculator_can_subtract
+    skip
+  end
 
 end
