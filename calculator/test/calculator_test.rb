@@ -10,6 +10,11 @@ class CalculatorTest < Minitest::Test
     assert_instance_of Calculator, item
   end
 
+  def test_the_calculator_total_is_0_by_default
+    ti_86 = Calculator.new
+    assert_equal 0, ti_86.total
+  end
+  
   def test_the_calculator_tracks_a_total
     skip
   end
