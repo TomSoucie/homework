@@ -32,7 +32,8 @@ class CalculatorTest < Minitest::Test
   end
   
   def test_the_calculator_can_subtract_and_return_total
-    skip
+    mayan_calendar = Calculator.new
+    mayan_calendar.subtract([23, 40])
   end
 
 end

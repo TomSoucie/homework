@@ -12,4 +12,9 @@ class Calculator
   def clear
     @total = 0
   end
+  
+  def subtract(numbers)
+    @total = numbers.reduce(0) { |x, num| x - num }
+  end
+
 end   
