@@ -21,12 +21,14 @@ class CalculatorTest < Minitest::Test
     assert_equal 60, abacus.total
   end
 
-  def test_the_calculator_tracks_a_total
-    skip
-  end
-
   def test_the_calculator_can_clear_the_memory
-    skip
+    calculator = Calculator.new
+    calculator.add([9, 99])
+    calculator.clear 
+    assert_equal 0, calculator.total
+
+    calculator.add([10, 20])
+    assert_equal 30, calculator.total
   end
   
   def test_the_calculator_can_subtract_and_return_total
