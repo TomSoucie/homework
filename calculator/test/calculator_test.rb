@@ -34,6 +34,7 @@ class CalculatorTest < Minitest::Test
   def test_the_calculator_can_subtract_and_return_total
     mayan_calendar = Calculator.new
     mayan_calendar.subtract([23, 40])
+    assert_equal -17, mayan_calendar.total
   end
 
 end

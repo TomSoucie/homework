@@ -14,7 +14,7 @@ class Calculator
   end
   
   def subtract(numbers)
-    @total = numbers.reduce(0) { |x, num| x - num }
+    @total = numbers.reduce(numbers[0] * 2) { |x, num| x - num }
   end
 
 end   
