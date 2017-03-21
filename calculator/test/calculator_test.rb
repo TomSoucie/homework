@@ -14,12 +14,14 @@ class CalculatorTest < Minitest::Test
     ti_86 = Calculator.new
     assert_equal 0, ti_86.total
   end
-  
-  def test_the_calculator_tracks_a_total
-    skip
+
+  def test_the_calculator_can_add_and_return_total
+    abacus = Calculator.new
+    abacus.add([23, 37])
+    assert_equal 60, abacus.total
   end
 
-  def test_the_calculator_can_add
+  def test_the_calculator_tracks_a_total
     skip
   end
 
@@ -27,7 +29,7 @@ class CalculatorTest < Minitest::Test
     skip
   end
   
-  def test_the_calculator_can_subtract
+  def test_the_calculator_can_subtract_and_return_total
     skip
   end
 
